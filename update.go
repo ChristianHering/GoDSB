@@ -24,7 +24,7 @@ func updateCallback(position int) error {
 
 	updates := strconv.Itoa(len(strings.Split(string(b), "\n")))
 
-	if updates == "0" {
+	if updates == "0" || updates == "" {
 		updates = "No"
 	}
 

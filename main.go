@@ -25,10 +25,12 @@ var sectionCallbacks = []struct {
 }{
 	{dateEventCallback, dateCallback, 1, time.Second},
 	{audioDownEventCallback, audioDownCallback, 2, time.Duration(0)},
-	{audioEventCallback, audioCallback, 2, time.Hour},
+	{audioEventCallback, audioCallback, 2, time.Second * 10},
 	{audioUpEventCallback, audioUpCallback, 2, time.Duration(0)},
 	{updateEventCallback, updateCallback, 3, time.Hour},
-	{miningEventCallback, miningCallback, 4, (2 * time.Minute)},
+	{musicDownEventCallback, musicDownCallback, 4, time.Duration(0)},
+	{musicEventCallback, musicCallback, 4, time.Second * 10},
+	{musicUpEventCallback, musicUpCallback, 4, time.Duration(0)},
 	{bitcoinEventCallback, bitcoinCallback, 5, time.Minute},
 }
 
